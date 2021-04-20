@@ -82,6 +82,9 @@
             android:layout_height="wrap_content"
             android:text="Mata kuliah:"
             android:layout_marginLeft="20dp"
+            android:fontFamily="@font/rocc"
+            android:textSize="20dp"
+            android:textColor="@color/black"
             />
 
         <EditText
@@ -100,6 +103,10 @@
             android:text="Nama Tugas:"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="100dp"
+            android:fontFamily="@font/rocc"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+
             />
 
         <EditText
@@ -118,6 +125,10 @@
             android:text="Deksripsi Tugas:"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="200dp"
+            android:fontFamily="@font/rocc"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+
             />
 
         <EditText
@@ -137,7 +148,8 @@
             android:text="Simpan"
             android:backgroundTint="#723881"
             android:layout_marginTop="350dp"
-            android:layout_marginLeft="250dp"/>
+            android:layout_marginLeft="250dp"
+            android:fontFamily="@font/times"/>
 
     </FrameLayout>
 
