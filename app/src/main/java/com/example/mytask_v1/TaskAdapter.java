@@ -33,7 +33,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     public void onBindViewHolder(@NonNull TaskAdapter.TaskViewHolder holder, int position) {
             holder.tv_Matkul.setText(ListTugas.get(position).getMatkul());
             holder.tv_Tugas.setText(ListTugas.get(position).getTugas());
-            holder.tv_Deadline.setText(ListTugas.get(position).getDeadline());
+
     }
 
     @Override
@@ -52,7 +52,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             tv_Matkul =view.findViewById(R.id.tv_Matkul);
             tv_Tugas = view.findViewById(R.id.tv_Tugas);
             tv_Deadline = view.findViewById(R.id.tv_Deadline);
-//            contentrCard = view.findViewById(R.id.contentCard);
+
 
         }
     }

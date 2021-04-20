@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Deklarasi tombol
     private TextView tanggal, myTaskAtas;
-    private ImageButton Home, New, Done;
+    private ImageButton Home, New;
 
-    //Buat nyari tanggal
-    int year, month, day;
 
     //Nampung tanggal
     String date;
@@ -36,15 +35,10 @@ public class MainActivity extends AppCompatActivity {
         //Hilangin tulisan diatas
         getSupportActionBar().hide();
 
-        //Ganti font myTask masih salah
-//        myTaskAtas = (TextView)findViewById(R.id.myTaskAtas);
-//        Typeface typeface = Typeface.createFromAsset(getAssets(),"font/californian.ttf");
-//        myTaskAtas.setTypeface(typeface);
-
         //Inisialisasi button di activity
         Home = (ImageButton) findViewById(R.id.btn_Home);
-        New = findViewById(R.id.btn_New);
-        Done = findViewById(R.id.btn_Done);
+        New = (ImageButton) findViewById(R.id.btn_New);
+
 
         //Menampilkan tanggal (belum sesuai mockup)
         tanggal = findViewById(R.id.tanggal);
@@ -63,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.container, new HomeFragment());
                 ft.commit();
+            }
+        });
+
+        New.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, newActivity.class));
             }
         });
 

@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 android:text="m y T a s k"
                 android:textColor="@color/black"
-                android:textSize="20dp"/>
+                android:fontFamily="@font/californian"
+                android:textSize="30dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -42,6 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tanggal"
+                android:fontFamily="@font/times"
+                android:textSize="14dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
 
@@ -57,10 +60,12 @@
 
         <Button
             android:layout_width="320dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="WHAT YOU HAVE TO DO"
             android:backgroundTint="#723881"
-
+            android:fontFamily="@font/californian"
+            android:clickable="false"
+            android:textSize="17dp"
             />
     </LinearLayout>
 
@@ -98,14 +103,6 @@
             android:layout_marginVertical="1dp"
             android:layout_gravity="center"
             android:src="@drawable/new_"
-            android:background="@color/white"/>
-
-        <ImageButton
-            android:id="@+id/btn_Done"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/done"
             android:background="@color/white"/>
 
     </LinearLayout>

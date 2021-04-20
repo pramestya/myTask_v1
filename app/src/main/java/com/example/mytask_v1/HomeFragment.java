@@ -38,6 +38,10 @@ public class HomeFragment extends Fragment {
     private TaskAdapter taskAdapter;
     private ArrayList<Task> ListTask;
 
+    private static String KEY_MATKUL = "msg_matkul";
+    private static String KEY_TUGAS = "msg_tugas";
+    private static String KEY_DESKRIPSI = "msg_deskripsi";
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -84,6 +88,14 @@ public class HomeFragment extends Fragment {
             e.printStackTrace();
         }
 
+        try {
+            ListTask.add(new Task(getArguments().getString(KEY_MATKUL),getArguments().getString(KEY_TUGAS),getArguments().getString(KEY_DESKRIPSI)));
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+
+
         //baru masukin recyclernya
         recyclerView = view.findViewById(R.id.HomeRecycler);
         taskAdapter = new TaskAdapter(ListTask);
@@ -101,8 +113,8 @@ public class HomeFragment extends Fragment {
 
         ListTask = new ArrayList<>();
 
-        ListTask.add(new Task("Statistika & Probabilitas", "Statistika distributif", "Cari jurnal", "Senin", false));
-        ListTask.add(new Task("PKN", "Tantangan ideologi", "Buat artikel ilmiah", "Minggu", false));
+        ListTask.add(new Task("Statistika & Probabilitas", "Statistika distributif", "Cari jurnal"));
+        ListTask.add(new Task("PKN", "Tantangan ideologi", "Buat artikel ilmiah"));
 
     }
 }
